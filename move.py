@@ -14,21 +14,16 @@ class move:
         self._loadImages(name)
 
     def _loadImages(self, name):
-        numcols=0
-        numrows=0
-        size = 192
+        size=0
         if (self.name == "slash" or self.name == "thrust" or self.name == "punch"):
-            numcols = 5
-            numrows = 3
-        if (self.name == "buff" or self.name == "debuff" or self.name == "shimmer" or self.name == "shield"):
-            numcols = 5
-            numrows = 6
-        if (self.name == "cure"):
-            numcols = 5
-            numrows = 8
-        if (self.name == "barrier or burst"):
-            numcols = 5
-            numrows = 10
-        for i in range(numrows):
-            for j in range(numcols):
-                self.images.append(pygame.image.load("images/MoveSprites/"+name+"/"+name+str((i*numcols)+j+1)+".png"))
+            size=15
+        if (self.name == "buff" or self.name == "debuff" or self.name == "shimmer" or self.name == "shield" or self.name == "jim"):
+            size=30
+        if (self.name == "heal"):
+            size=40
+        if (self.name == "barrier" or self.name == "burst"):
+            size=50
+        print(3)
+        for i in range(size):
+            self.images.append(pygame.image.load("images/MoveSprites/"+name+"/"+name+str(i+1)+".png"))
+
