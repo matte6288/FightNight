@@ -10,3 +10,6 @@ Make sure fighter.py, network.py, move.py, game.py and the images folder are in 
 Run two instances of game.py, make sure active_player is set to 1 on one device playing and 0 on the other.
 
 This will connect the two pi’s to the server and you will be ready to play!
+
+Video Overview:
+https://youtu.be/73raTkUnIh8
