@@ -1,6 +1,6 @@
 import socket
 from _thread import *
-import fighter
+
 import sys
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -20,7 +20,7 @@ s.listen(2)
 print("Waiting for a connection")
 
 currentId = "0"
-fighterInfo=["0:name:100:none","1:name:100:none"]
+fighterInfo=["0:jim:100:none:1","1:jim:100:none:1"]
 def threaded_client(conn):
     global currentId, pos
     conn.send(str.encode(currentId))
@@ -40,8 +40,10 @@ def threaded_client(conn):
                 fighterInfo[id]=reply
 
 
-                if id == 0: nid = 1
-                if id == 1: nid = 0
+                if id == 0:
+                    nid = 1
+                if id == 1:
+                    nid = 0
 
                 reply = fighterInfo[nid][:]
                 print("Sending: " + reply)
