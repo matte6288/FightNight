@@ -1,5 +1,6 @@
 import socket
 #this code is a template from tech with tim
+#https://www.techwithtim.net/tutorials/python-online-game-tutorial/client/
 
 class network:
 
